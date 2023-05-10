@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Menu</title>
+</head>
+<body>
+    <section class="menu">
+        <div class="nav">
+          <div class="logo"><h1>Fast<b>Food</b>Delivery</h1></div>
+          <ul>
+            <li><a routerLink="/home-page"><span>Home</span></a></li>
+            <li><a routerLink="/restaurants"><span>Restaurants</span></a></li>
+            <li><a routerLink="/top-sellers"><span>Top-Sellers</span></a></li>
+            <li><a routerLink="/admins"><span>About Us</span></a></li>
+          </ul>
+          <div>
+            <a routerLink="/login"><input class="login" type="submit" value="Log In" name="login"></a>
+            <input class="singup" type="submit" value="Sing Up" name="singup">
+          </div>
+        </div>
+      </section>
+    <section class="list">
+        <h1>Menu</h1>
+        <p></p>
+        <ul>
+            <li *ngFor="let item of menu"><h1>{{item.name}} : {{item.price}} <button><span>Order<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);"><path d="M8.132 2.504 4.42 9H3a1.001 1.001 0 0 0-.965 1.263l2.799 10.263A2.004 2.004 0 0 0 6.764 22h10.473c.898 0 1.692-.605 1.93-1.475l2.799-10.263A.998.998 0 0 0 21 9h-1.42l-3.712-6.496-1.736.992L17.277 9H6.723l3.145-5.504-1.736-.992zM14 13h2v5h-2v-5zm-6 0h2v5H8v-5z"></path></svg></span></button></h1></li>
+            
+        </ul>
+    </section>
+</body>
+</html>

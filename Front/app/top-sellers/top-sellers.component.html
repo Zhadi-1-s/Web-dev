@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top-Sellers</title>
+    <link rel="stylesheet" href="top-sellers.component.css">
+</head>
+<body>
+    <section class="menu">
+        <div class="nav">
+          <div class="logo"><h1>Fast<b>Food</b>Delivery</h1></div>
+          <ul>
+            <li><a routerLink="/home-page"><span>Home</span></a></li>
+            <li><a routerLink="/restaurants"><span>Restaurants</span></a></li>
+            <li><a routerLink="/top-sellers"><span>Top-Sellers</span></a></li>
+            <li><a routerLink="/admins"><span>About Us</span></a></li>
+          </ul>
+          <div>
+            <a routerLink="/login"><input class="login" type="submit" value="Log In" name="login"></a>
+            <input class="singup" type="submit" value="Sing Up" name="singup">
+          </div>
+        </div>
+      </section>
+    <div *ngFor="let restaurant of restaurants">
+        <div *ngIf="restaurant.rating >=4.5">
+            <a [routerLink]="['/restaurants', restaurant.id]"><h1>{{restaurant.name}}</h1></a>
+            <img src="" alt="">
+        </div>
+    </div>
+</body>
+</html>

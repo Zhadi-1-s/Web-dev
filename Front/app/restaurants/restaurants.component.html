@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Restaurants</title>
+</head>
+<body>
+    <section class="menu">
+        <div class="nav">
+          <div class="logo"><h1>Fast<b>Food</b>Delivery</h1></div>
+          <ul>
+            <li><a routerLink="/home-page"><span>Home</span></a></li>
+            <li><a routerLink="/restaurants"><span>Restaurants</span></a></li>
+            <li><a routerLink="/top-sellers"><span>Top-Sellers</span></a></li>
+            <li><a routerLink="/admins"><span>About Us</span></a></li>
+          </ul>
+          <div>
+            <a routerLink="/login"><input class="login" type="submit" value="Log In" name="login"></a>
+            <input class="singup" type="submit" value="Sing Up" name="singup">
+          </div>
+        </div>
+      </section>
+      <section class="restaurants">
+        <div class="content">
+            <h1>Restaurants delivery in Almaty</h1>
+        </div>
+          <mat-form-field style="width: 14cm;">
+            <input matInput type="text" [(ngModel)]="searchItem" placeholder="Search.." name="search" [matAutocomplete]="auto">
+            <mat-autocomplete #auto="matAutocomplete">
+              <mat-option *ngFor="let restaurant of restaurants | filter: searchItem" [value]="restaurant">
+                <h2><a [routerLink]="['/restaurants', restaurant.id]">{{restaurant.name}}</a></h2>
+              </mat-option>
+            </mat-autocomplete>
+          </mat-form-field>
+        <!-- <form class="example" action="action_page.php">
+            <input type="text" placeholder="Search.." name="search">
+            <button type="submit"><i class="fa fa-search"></i></button>
+          </form> -->
+        <!-- <div class="list-items">
+            <ul>
+                <li *ngFor = "let restaurant of restaurants">
+                    <h2><a [routerLink]="['/restaurants', restaurant.id]">{{restaurant.name}}</a></h2>
+                    <p> Cuisine : {{restaurant.cuisine}}</p>
+                    <p> Rating : {{restaurant.rating}}</p>
+                </li>
+            </ul>
+        </div> -->
+      </section>
+</body>
+</html>

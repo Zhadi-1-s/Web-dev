@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home page</title>
+  <link rel="stylesheet" href="home-page.component.css">
+  <link rel="stylesheet" href="">
+</head>
+<body>
+  <section class="menu">
+    <div class="nav">
+      <div class="logo"><h1>Fast<b>Food</b>Delivery</h1></div>
+      <ul>
+        <li><a routerLink="/home"><span>Home</span></a></li>
+        <li><a routerLink="/restaurants"><span>Restaurants</span></a></li>
+        <li><a routerLink="/top-sellers"><span>Top-Sellers</span></a></li>
+        <li><a routerLink="/admins"><span>About Us</span></a></li>
+      </ul>
+      <div>
+        <a routerLink="/login"><input class="login" type="submit" value="Log In" name="login"></a>
+        <input class="singup" type="submit" value="Sing Up" name="singup">
+      </div>
+    </div>
+  </section>
+  <section class="grid">
+    <div class="content">
+      <div class="content-left">
+        <div class="info">
+          <h2>Order Your Best <br>Food anytime</h2>
+          <p>Hey, Our delicious food is waiting for you, <br>
+              We are always near to you with fresh item of food.</p>
+        </div>
+        <button>Explore Food</button>
+      </div>
+      <div class="content-right">
+        <img src="/assets/fooo.png" alt="">
+      </div>
+    </div>
+  </section>
+  <section class="category">
+    <div class="list-items">
+      <h3>Top-Sellers</h3>
+      <div class="card-list">
+        <div class="card">
+          
+          <img src="/assets/1.png" routerLink="/restaurants">
+          <div class="food-title">
+            <h1>Menu Cheese Burger beef</h1>
+          </div>
+          <div class="desc-food">
+            <p>Говяжий бургер с одной котлетой и сыром, напиток, фри, соус</p>
+          </div>
+          <div class="price">
+            <span>KZT 2,550.00</span><span><i class='bx bx-plus-circle plus-icon' ></i></span>
+          </div>
+        </div>
+        <div class="card">
+          <img src="/assets/2h.png" routerLink="/restaurants">
+          <div class="food-title">
+            <h1>Дабл халапеньо бургер комбо</h1>
+          </div>
+          <div class="desc-food">
+            <p>Особенно пикантный бургер от Hardee's с двумя котлетами из 100% говядины, приготовленными на открытом огне, с швейцарским сыром, салатом айсберг, свежими овощами, острым перчиком халапеньо и фирменным соусом санта-фе. Увеличенная порция фри и напиток</p>
+          </div>
+          <div class="price">
+            <span>KZT 4,000.00</span><span><i class='bx bx-plus-circle plus-icon' ></i></span>
+          </div>
+        </div>
+        <div class="card">
+          <img src="/assets/3m.png" routerLink="/restaurants">
+          <div class="food-title">
+            <h1>Combo Двойной чизбургер</h1>
+          </div>
+          <div class="desc-food">
+            <p>Два сочных бифштекса из натуральной цельной говядины с кусочками сыра на специальной булочке, заправленной горчицей, кетчупом, луком и кусочком маринованного огурчика, стандартная порция обжаренного и слегка посоленного картофеля фри, газированный напиток Coca-Cola</p>
+          </div>
+          <div class="price">
+            <span>KZT 1,800.00</span><span><i class='bx bx-plus-circle plus-icon' ></i></span>
+          </div>
+        </div>
+        <div class="card">
+          <img src="/assets/4d.webp" routerLink="/restaurants">
+          <div class="food-title">
+            <h1>Пицца 25 см + напиток</h1>
+          </div>
+          <div class="desc-food">
+            <p>Пикантная пепперони, мно-о-ого моцареллы, томаты и томатный соус,Pepsi Zero 0,5 л</p>
+          </div>
+          <div class="price">
+            <span>KZT 2,100.00</span><span><i class='bx bx-plus-circle plus-icon' ></i></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
